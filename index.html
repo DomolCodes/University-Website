@@ -3,27 +3,105 @@
 
 <head>
     <style>
-        body * {
-            /* border: 1px solid red; */
+        body {
             margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe {
             width: 100%;
-            height: 100vh;
+            border: none;
+            display: block;
+            height: auto; /* ← Critical! */
+            overflow: visible; /* ← Allows content to flow */
+        }
+
+        #navigation iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            margin-top: -14.5px;
+        }
+
+        #hero {
+            padding-top: 70px;
         }
     </style>
     <title>First Project</title>
 </head>
 
 <body>
+
     <section id="navigation">
-        <iframe style="margin:0; border: none;" src="navigation.html"></iframe>
+        <iframe src="navigation.html"></iframe>
     </section>
 
-    <section id="hero" style="margin-top: -572px;">
-        <iframe style="margin:0; border: none;" src="herosection.html"></iframe>
+    <section id="hero">
+        <iframe name="hero" src="herosection.html" 
+            style="width: 100%; height: 565px; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
     </section>
 
-    <section id="about" style="margin-top: -220px; margin-bottom: 220p;">
-        <iframe style="border: none; overflow: hidden;" src="aboutus.html"></iframe>
+    <section id="about">
+        <iframe src="aboutus.html" name="about"
+            style="width: 100%; height: 700px; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="programs">
+        <iframe src="programs.html" name="progs"
+            style="width: 100%;height:626px ; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="resources">
+        <iframe src="resources.html" name="source"
+            style="width: 100%; height: 574.81px; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="stories">
+        <iframe src="stories.html" name="novel" 
+            style="width: 100%; height:611.16px ; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="partners"> 
+        <iframe src="partners.html" name="ally"
+            style="width: 100%; height:357.38px; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="students">
+        <iframe src="students.html"  name="pupil"
+            style="width: 100%; height:640.95px ; border: none; overflow: hidden;" 
+            onload="resizeIframe(this)" 
+            scrolling="no">
+        </iframe>
+    </section>
+
+    <section id="last">
+        <iframe src="last.html" scrolling="no" onload="resizeIframe(this)" style="height: 300px;"></iframe>
     </section>
 
 </body>
