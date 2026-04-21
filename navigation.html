@@ -1,71 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<style>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
 
+      li {
+        float: left;
+      }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+      li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 25px;
+        text-decoration: none;
+      }
 
-li {
-  float: left;
-  
-}
+      li a:hover {
+        color: green;
+      }
 
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 25px;
-  text-decoration: none;
-}
+      img {
+        float: left;
+      }
+      .media{
+        font-size: 30px;
+        padding-right: 12px;
+        }
 
-li a:hover {
-  color: green;
-}
+    </style>
+  </head>
+  <body style="height: 95px; overflow: hidden">
+    <div style="background-color: whitesmoke; display: flex">
+      <div style="position: relative; left: 150px;top: 13px;">
+        <img style="" src="Logo.png" height="50px" usemap="#uni" />
+      </div>
 
-img {
-    float: left;
-}
+      <div style="position: relative; left: 150px">
+        <ul style="font-family: Arial, Helvetica, sans-serif">
+          <li>
+            <a
+              href="herosection.html"
+              target="hero"
+              style="position: relative"
+              onclick="
+                /* 1. Make all hidden sections visible again */
+                parent.document.getElementsByName('about')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('source')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('novel')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('ally')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('progs')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('pupil')[0].style.display =
+                  'block';
 
+                /* 2. Restore the original files to the frames */
+                parent.document.getElementsByName('progs')[0].s rc =
+                  'programs.html';
+                parent.document.getElementsByName('pupil')[0].src =
+                  'students.html';
 
-</style>
-</head>
-<body style="height: 85px;overflow: hidden;">
+                /* 3. Reset all heights to original dimensions */
+                parent.document.getElementsByName('hero')[0].style.height =
+                  '565px';
+                parent.document.getElementsByName('about')[0].style.height =
+                  '700px';
+                parent.document.getElementsByName('source')[0].style.height =
+                  '574.81px';
+                parent.document.getElementsByName('novel')[0].style.height =
+                  '611.16px';
+                parent.document.getElementsByName('ally')[0].style.height =
+                  '357.38px';
+                parent.document.getElementsByName('progs')[0].style.height =
+                  '626px';
+                parent.document.getElementsByName('pupil')[0].style.height =
+                  '640.95';
+                parent.document.getElementsByName('last')[0].style.height =
+                  '450px';
+              "
+            >
+              Home
+            </a>
 
+            
+          </li>
+          <li>
+            <a
+              href="moreabout.html"
+              target="hero"
+              onclick="
+               /* 1. Make all hidden sections visible again */
+                parent.document.getElementsByName('about')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('source')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('novel')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('ally')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('progs')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('pupil')[0].style.display =
+                  'block';
 
-<div style="background-color: whitesmoke; display: flex;">
-    <div style="position: relative; left: 150px;"><img style=" " src="Logo.png" height="50px" usemap="#uni" ></div>
+                /* 2. Restore the original files to the frames */
+                parent.document.getElementsByName('progs')[0].src =
+                  'programs.html';
 
-    <div style="position: relative; left:150px ;">
-  <ul style="font-family:Arial, Helvetica, sans-serif;">
-  <li><a style="position: relative;" href="herosection.html" target="hero" onclick="parent.document.getElementsByName('hero')[0].style.height='565px';">Home</a></li>
-  <li><a href="moreabout.html" target="hero" onclick="parent.document.getElementsByName('hero')[0].style.height='283px';">About</a></li>
-  <li><a href="moreprogramstarter.html" target="hero" onclick="parent.document.getElementsByName('hero')[0].style.height='283px'; parent.document.getElementsByName('progs')[0].src='moreprogramsbody.html'; parent.document.getElementsByName('progs')[0].style.height='1046px'; parent.document.getElementsByName('ally')[0].style.display='none'; parent.document.getElementsByName('novel')[0].style.display='none'; parent.document.getElementsByName('source')[0].style.display='none'; parent.document.getElementsByName('about')[0].style.display='none';">Program</a></li>
-  <li style="margin-right: 30px;"><a href="morecontactstarter.html" target="hero" onclick="parent.document.getElementsByName('hero')[0].style.height='283px'; parent.document.getElementsByName('pupil')[0].src='morecontactbody.html'; parent.document.getElementsByName('pupil')[0].style.height='1150px'; parent.document.getElementsByName('ally')[0].style.display='none'; parent.document.getElementsByName('progs')[0].style.display='none'; parent.document.getElementsByName('novel')[0].style.display='none'; parent.document.getElementsByName('source')[0].style.display='none'; parent.document.getElementsByName('about')[0].style.display='none';">Contact</a></li>
-</ul></div>
+                parent.document.getElementsByName('pupil')[0].src =
+                  'students.html';
+                parent.document.getElementsByName('hero')[0].src =
+                  'moreabout.html';
 
-  <div style="float:inline-start; padding: 25px; color: black; text-decoration: none;position: relative;left:150px ;"><span style="color: green;">Call Us</span>  : 0 (78) 675 3674 |</div>
-<div style="margin: 10; padding: 25px;position: relative;left: 150px;">
+                /* 3. Reset all heights to original dimensions */
+                parent.document.getElementsByName('hero')[0].style.height =
+                  '283px';
+                parent.document.getElementsByName('about')[0].style.height =
+                  '700px';
+                parent.document.getElementsByName('source')[0].style.height =
+                  '574.81px';
+                parent.document.getElementsByName('novel')[0].style.height =
+                  '611.16px';
+                parent.document.getElementsByName('ally')[0].style.height =
+                  '357.38px';
+                parent.document.getElementsByName('progs')[0].style.height =
+                  '626px';
+                parent.document.getElementsByName('pupil')[0].style.height =
+                  '640.95';
+                parent.document.getElementsByName('last')[0].style.height =
+                  '450px';
+              "
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="moreprogramstarter.html"
+              target="hero"
+              onclick="
+                /* 1. Make all hidden sections visible again */
+                parent.document.getElementsByName('about')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('source')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('novel')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('ally')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('progs')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('pupil')[0].style.display =
+                  'block';
 
-  <a href="https://twitter.com" target="_blank;" ><i class="fab fa-twitter"></i></a>
-  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-  <a href="https://telegram.com" target="_blank"><i class="fab fa-telegram"></i></a>
-  
-</div>
-</div>
+                /* 2. Restore the original files to the frames */
+                parent.document.getElementsByName('progs')[0].src =
+                  'moreprogramsbody.html';
 
-<map name="uni">
-  <area shape="rect" coords="0,0,325,50" href="index.html#hero" target="_parent">
-</map>
+                parent.document.getElementsByName('pupil')[0].src =
+                  'students.html';
+                parent.document.getElementsByName('hero')[0].src =
+                  'moreprogramstarter.html';
 
-</body>
+                /* 3. Reset all heights to original dimensions */
+                parent.document.getElementsByName('hero')[0].style.height =
+                  '283px';
+                parent.document.getElementsByName('about')[0].style.height =
+                  '700px';
+                parent.document.getElementsByName('source')[0].style.height =
+                  '574.81px';
+                parent.document.getElementsByName('novel')[0].style.height =
+                  '611.16px';
+                parent.document.getElementsByName('ally')[0].style.height =
+                  '357.38px';
+                parent.document.getElementsByName('progs')[0].style.height =
+                  '1046px';
+                parent.document.getElementsByName('pupil')[0].style.height =
+                  '640.95';
+                parent.document.getElementsByName('last')[0].style.height =
+                  '450px';
+              "
+              >Program</a
+            >
+          </li>
+          <li style="margin-right: 30px">
+            <a
+              href="morecontactstarter.html"
+              target="hero"
+              onclick="
+                /* 1. Make all hidden sections visible again */
+                parent.document.getElementsByName('about')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('source')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('novel')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('ally')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('progs')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('pupil')[0].style.display =
+                  'none';
+
+                /* 2. Restore the original files to the frames */
+                parent.document.getElementsByName('progs')[0].src =
+                  'morecontactbody.html';
+
+                parent.document.getElementsByName('pupil')[0].src =
+                  'students.html';
+                parent.document.getElementsByName('hero')[0].src =
+                  'morecontactstarter.html';
+
+                /* 3. Reset all heights to original dimensions */
+                parent.document.getElementsByName('hero')[0].style.height =
+                  '283px';
+                parent.document.getElementsByName('about')[0].style.height =
+                  '700px';
+                parent.document.getElementsByName('source')[0].style.height =
+                  '574.81px';
+                parent.document.getElementsByName('novel')[0].style.height =
+                  '611.16px';
+                parent.document.getElementsByName('ally')[0].style.height =
+                  '357.38px';
+                parent.document.getElementsByName('progs')[0].style.height =
+                  '1150px';
+                parent.document.getElementsByName('pupil')[0].style.height =
+                  '640.95px';
+                parent.document.getElementsByName('last')[0].style.height =
+                  '450px';
+              "
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        style="
+          float: inline-start;
+          padding: 25px;
+          color: black;
+          text-decoration: none;
+          position: relative;
+          left: 150px;
+        "
+      >
+        <span style="color: green">Call Us</span> : 0 (78) 675 3674 |
+      </div>
+      <div style="margin: 10; padding: 25px; position: relative; left: 150px">
+        <a class="media" href="https://twitter.com" target="_blank;"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a class="media" href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a class="media" href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a class="media" href="https://youtube.com" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a class="media" href="https://telegram.com" target="_blank"
+          ><i class="fab fa-telegram"></i
+        ></a>
+      </div>
+    </div>
+
+    <map name="uni">
+      <area
+        shape="rect"
+        coords="0,0,325,50"
+        href="index.html#hero"
+        target="_parent"
+      />
+    </map>
+  </body>
 </html>
-
