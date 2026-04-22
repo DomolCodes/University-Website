@@ -30,7 +30,7 @@
 </head>
 <body style="height: auto;">
     
-    <div id="home" style="background-image: url(home.jpg); background-size: cover; background-repeat: no-repeat; font-size: 30px; padding-left: 100px; color:white; margin-top: 0; ">
+    <div id="home" style=" width:1387px;background-image: url(home.jpg); background-size: cover; background-repeat: no-repeat; font-size: 30px; padding-left: 100px; color:white; margin-top: 0; ">
         <div style="padding-top: 100px;">
             Education & Schools 
         </div>
@@ -41,7 +41,48 @@
            <small style="font-size:60% ;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Suspendisse varius enim in eros elementum tristique.</small> 
         </div>
             <div style="padding-top: 25px;">
-        <button class="but" >Get Started Now</button>
+        <button onclick="
+                /* 1. Make all hidden sections visible again */
+                parent.document.getElementsByName('about')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('source')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('novel')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('ally')[0].style.display =
+                  'none';
+                parent.document.getElementsByName('progs')[0].style.display =
+                  'block';
+                parent.document.getElementsByName('pupil')[0].style.display =
+                  'block';
+
+                /* 2. Restore the original files to the frames */
+                parent.document.getElementsByName('progs')[0].src =
+                  'moreprogramsbody.html';
+
+                parent.document.getElementsByName('pupil')[0].src =
+                  'students.html';
+                parent.document.getElementsByName('hero')[0].src =
+                  'moreprogramstarter.html';
+
+                /* 3. Reset all heights to original dimensions */
+                parent.document.getElementsByName('hero')[0].style.height =
+                  '283px';
+                parent.document.getElementsByName('about')[0].style.height =
+                  '700px';
+                parent.document.getElementsByName('source')[0].style.height =
+                  '667.5px';
+                parent.document.getElementsByName('novel')[0].style.height =
+                  '611.16px';
+                parent.document.getElementsByName('ally')[0].style.height =
+                  '357.38px';
+                parent.document.getElementsByName('progs')[0].style.height =
+                  '1046px';
+                parent.document.getElementsByName('pupil')[0].style.height =
+                  '640.95';
+                parent.document.getElementsByName('last')[0].style.height =
+                  '450px';
+              " class="but" >Get Started Now</button>
     </div>
     <br><br><br><br>
     </div>
